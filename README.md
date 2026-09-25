@@ -6,7 +6,7 @@ Resources for the R8 retro CPU architecture.
 
 A guided introduction to building a high-level R8 emulator can be found here:
 
-* [Welcome to the machine](https://bitfieldconsulting.com/posts/welcome-machine)
+* [Welcome to the machine](https://bitfieldconsulting.com/posts/welcome-to-machine)
 
 ## Emulators
 
