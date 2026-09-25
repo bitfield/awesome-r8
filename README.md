@@ -15,6 +15,7 @@ There are a number of implementations of the R8 in various languages:
 * [RX82](https://github.com/bitfield/r8/tree/main/crates/rx82) — a low-level emulator for a retro computer system based on the R8 (Rust)
 * [gr8](https://github.com/bitfield/gr8) - a high-level R8 emulator (Go)
 * [go-r8](https://github.com/jgrecu/go-r8) — a high-level R8 emulator by Jeremy Grecu (Go)
+* [ts-r8-emulator](https://github.com/alvarezgarcia/ts-r8-emulator) — a high-level R8 emulator by Sebastián Alvarez
 
 ## Libraries
 
