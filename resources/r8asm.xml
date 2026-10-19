@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd">
+<language name="R8 Assembler" section="Assembler" extensions="*.r8asm;*.asm" casesensitive="0" author="John Arundel (john@bitfieldconsulting.com)" license="MIT">
+
+  <general>
+    <comments>
+      <comment name="singleLine" start=";" />
+    </comments>
+  </general>
+
+  <highlighting>
+    <contexts>
+      <!-- Normal code (non-comment) -->
+      <context name="Normal" attribute="Normal" lineEndContext="#stay">
+        <Detect2Chars char=";" char1=";" attribute="Documentation Comment" context="DocComment"/>
+        <DetectChar char=";" attribute="Comment" context="Comment"/>
+        <RegExpr String="\.?\w+:" attribute="Label" context="#stay"/>
+        <RegExpr String="\&quot;[^\n]*\&quot;" attribute="String" context="#stay"/>
+        <RegExpr String="0x[0-9a-fA-F]+" attribute="Constant" context="#stay"/>
+        <RegExpr String="0b[01]+" attribute="Constant" context="#stay"/>
+        <RegExpr String="[-]?[0-9]+" attribute="Constant" context="#stay"/>
+        <HlCChar attribute="Char" context="#stay"/>
+
+        <RegExpr String="[.#](data|org)" attribute="Directive" context="#stay"/>
+
+        <keyword String="data_instructions" attribute="Data Instruction" context="#stay"/>
+        <keyword String="stack_instructions" attribute="Stack Instruction" context="#stay"/>
+        <keyword String="arithmetic_instructions" attribute="Arithmetic Instruction" context="#stay"/>
+        <keyword String="bit_instructions" attribute="Bit Instruction" context="#stay"/>
+        <keyword String="shift_instructions" attribute="Shift Instruction" context="#stay"/>
+        <keyword String="control_instructions" attribute="Control Instruction" context="#stay"/>
+        <keyword String="hardware_instructions" attribute="Hardware Instruction" context="#stay"/>
+
+        <keyword String="registers" attribute="Normal" context="#stay"/>
+
+        <RegExpr String="[-+]*_" attribute="Label" context="#stay"/>
+        <RegExpr String="\.?\w+" attribute="Label" context="#stay"/>
+      </context>
+
+      <!-- Comments -->
+      <context name="Comment" attribute="Comment" lineEndContext="#pop">
+        <RegExpr String="(FIXME|TODO):?" attribute="Alert" context="#stay"/>
+      </context>
+      <context name="DocComment" attribute="Documentation Comment" lineEndContext="#pop">
+        <RegExpr String="(Inputs|Outputs|Notes):" attribute="Documentation Keyword" context="#stay"/>
+        <RegExpr String="(FIXME|TODO):?" attribute="Alert" context="#stay"/>
+      </context>
+    </contexts>
+
+    <itemDatas>
+      <itemData name="Normal" defStyleNum="dsNormal" spellChecking="false"/>
+      <itemData name="Data Instruction" defStyleNum="dsKeyword" spellChecking="false"/>
+      <itemData name="Stack Instruction" defStyleNum="dsKeyword" spellChecking="false"/>
+      <itemData name="Arithmetic Instruction" defStyleNum="dsKeyword" spellChecking="false"/>
+      <itemData name="Bit Instruction" defStyleNum="dsKeyword" spellChecking="false"/>
+      <itemData name="Shift Instruction" defStyleNum="dsKeyword" spellChecking="false"/>
+      <itemData name="Control Instruction" defStyleNum="dsKeyword" spellChecking="false"/>
+      <itemData name="Hardware Instruction" defStyleNum="dsKeyword" spellChecking="false"/>
+      <itemData name="Directive" defStyleNum="dsOthers" spellChecking="false"/>
+      <itemData name="Label" defStyleNum="dsRegionMarker" spellChecking="false"/>
+      <itemData name="Constant" defStyleNum="dsDecVal" spellChecking="false"/>
+      <itemData name="Char" defStyleNum="dsChar" spellChecking="true"/>
+      <itemData name="String" defStyleNum="dsString" spellChecking="true"/>
+      <itemData name="Comment" defStyleNum="dsComment" spellChecking="true"/>
+      <itemData name="Documentation Comment" defStyleNum="dsComment" color="#008000" selColor="#FFFFFF" spellChecking="true"/>
+      <itemData name="Documentation Keyword" defStyleNum="dsKeyword" color="#008000" selColor="#FFFFFF" bold="true" spellChecking="true"/>
+      <itemData name="Alert" defStyleNum="dsAlert" spellChecking="false"/>
+    </itemDatas>
+
+    <list name="data_instructions">
+      <item>ld</item>
+    </list>
+    <list name="stack_instructions">
+      <item>pop</item>
+      <item>push</item>
+    </list>
+    <list name="arithmetic_instructions">
+      <item>add</item>
+      <item>cmp</item>
+      <item>dec</item>
+      <item>inc</item>
+      <item>sub</item>
+      <item>test</item>
+    </list>
+    <list name="bit_instructions">
+      <item>and</item>
+      <item>or</item>
+      <item>xor</item>
+    </list>
+    <list name="shift_instructions">
+      <item>shl</item>
+      <item>lsr</item>
+      <item>asr</item>
+      <item>rol</item>
+      <item>ror</item>
+    </list>
+    <list name="control_instructions">
+      <item>bra</item>
+      <item>beq</item>
+      <item>bne</item>
+      <item>bcs</item>
+      <item>bcc</item>
+      <item>bmi</item>
+      <item>bpl</item>
+      <item>jmp</item>
+      <item>nop</item>
+      <item>ret</item>
+      <item>rti</item>
+      <item>trap</item>
+      <item>trapv</item>
+    </list>
+    <list name="hardware_instructions">
+      <item>halt</item>
+      <item>sec</item>
+      <item>clc</item>
+      <item>sei</item>
+      <item>cli</item>
+      <item>cpuid</item>
+    </list>
+
+    <list name="registers">
+      <item>a</item>
+      <item>b</item>
+      <item>c</item>
+      <item>d</item>
+      <item>e</item>
+      <item>f</item>
+      <item>g</item>
+      <item>h</item>
+      <item>ab</item>
+      <item>cd</item>
+      <item>ef</item>
+      <item>gh</item>
+      <item>sp</item>
+      <item>ps</item>
+    </list>
+  </highlighting>
+</language>

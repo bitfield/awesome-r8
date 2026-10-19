@@ -29,6 +29,12 @@ Utilities for those writing R8 programs or implementations.
 
 * [r8asm](https://github.com/bitfield/r8/tree/main/crates/r8asm) — an assembler / disassembler for R8
 
+## Developer experience
+
+Quality of life improvements for coding in R8 assembly language.
+
+* [Kate/KDE syntax definition file](resources/r8asm.xml) for R8 assembly
+
 ## Testing and validation
 
 Test programs and suites for validating R8 emulators.
