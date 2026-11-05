@@ -47,6 +47,10 @@ There are a number of R8 emulators in various languages.
 
 * [hare-r8](https://git.sr.ht/~whereiseveryone/hare-r8) — a Hare R8 emulator by Jorge Gomez.
 
+### Common Lisp
+
+* [jgart.r8](https://git.sr.ht/~whereiseveryone/jgart.r8) — another Hare R8 emulator by Jorge Gomez.
+
 ## Testing and validation
 
 Test programs and suites for validating R8 emulators.
