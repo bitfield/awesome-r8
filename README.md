@@ -12,7 +12,7 @@ Resources for the [R8](https://bitfieldconsulting.com/r8-cpu) retro CPU architec
 
 ## Tutorials
 
-* [Emergency in space](https://bitfieldconsulting.com/posts/welcome-to-machine) — a guided introduction to building a high-level R8 emulator
+* [Emergency in space: emulating a CPU](https://bitfieldconsulting.com/posts/emergency-space) — a guided introduction to building a high-level R8 emulator
 * [go-machine](https://github.com/bitfield/go-machine) — Go solutions to the tutorial exercises
 * [rust-machine](https://github.com/bitfield/rust-machine) — Rust solutions to the tutorial exercises
 * [ts-r8-solutions](https://github.com/alvarezgarcia/ts-r8-solutions) — TypeScript solutions to the tutorial exercises
@@ -31,6 +31,7 @@ There are a number of R8 emulators in various languages.
 
 * [RX82](https://github.com/bitfield/r8/tree/main/crates/rx82) — the official reference emulator, a low-level emulator for a 1982-style retro computer system based on the R8
 * [rust-r8](https://github.com/bitfield/rust-r8) — a template repo for writing R8 emulators in Rust
+* [rust-r8](https://github.com/ezebunandu/rust-r8) — a Rust R8 emulator by Sam Ezebunandu
 
 ### Go
 
